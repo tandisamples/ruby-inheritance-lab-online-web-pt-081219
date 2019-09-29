@@ -1,14 +1,15 @@
-require_relative "./user.rb"
+class Student < User
 
-class Student < User 
-   attr_reader :knowledge
- def initialize
-   @knowledge = []
- end
+  attr_accessor :knowledge
 
+  def initialize
+    @knowledge = []
+  end
 
- def learn(string)
-   @knowledge << string
- end
+  def learn(knowledge)
+    @knowledge << knowledge
+  end
 
-end
+  def knowledge
+    @knowledge
+  end
